@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Crime Detection & Prediction Dashboard</title>
+    <link href="static/images/favicon.png" rel="icon" type="image/png"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet"/>
+    <style>
+        .card-hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .button-gradient {
+            background: linear-gradient(135deg, #f06, #48c6ef);
+            color: white;
+        }
+        .button-gradient:hover {
+            background: linear-gradient(135deg, #48c6ef, #f06);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 text-gray-900 font-lora">
+    <header class="bg-white shadow-md p-6 text-center">
+        <h1 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500">Crime Detection & Prediction Dashboard</h1>
+    </header>
+    <main class="p-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Detection Button -->
+            <a href="/violence" class="block bg-white p-8 rounded-xl shadow-xl hover:bg-gray-100 card-hover-effect">
+                <div class="text-center">
+                    <i class="fas fa-video text-5xl mb-4 text-blue-500"></i>
+                    <h2 class="text-3xl font-semibold mb-4">Live Detection Feed</h2>
+                    <p class="text-gray-600">View live crime detection feed and receive real-time incident alerts.</p>
+                    <button class="mt-4 py-2 px-6 rounded-lg button-gradient">Start Detection</button>
+                </div>
+            </a>
+            <!-- Prediction Button -->
+            <a href="/crime" class="block bg-white p-8 rounded-xl shadow-xl hover:bg-gray-100 card-hover-effect">
+                <div class="text-center">
+                    <i class="fas fa-chart-line text-5xl mb-4 text-green-500"></i>
+                    <h2 class="text-3xl font-semibold mb-4">Crime Prediction</h2>
+                    <p class="text-gray-600">Analyze patterns and predict future crime hotspots using our advanced system.</p>
+                    <button class="mt-4 py-2 px-6 rounded-lg button-gradient">View Predictions</button>
+                </div>
+            </a>
+        </div>
+    </main>
+</body>
+</html>
